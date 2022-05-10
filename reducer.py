@@ -15,8 +15,8 @@ for line in sys.stdin:
     word, count = line.split('\t', 1)
     try:
         count = int(count)
-    except ValueError:
-        print(ValueError)
+    except ValueError as v:
+        print(v)
     if current_word == word:
         current_count += count
         counter[current_word] = current_count
